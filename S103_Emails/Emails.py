@@ -77,6 +77,11 @@ class Email():
         """Docstring."""
         pass
 
+    @staticmethod
+    def compose():
+        """Docstring."""
+        return ("compose email ")
+
     def create_message(self):
         """Docstring."""
         msg = EmailMessage()
@@ -100,6 +105,16 @@ class Email():
 
         print("Sending Email from: {}, to: {}".format(
             self.sender, self.recipient))
+
+    @staticmethod
+    def get_messages():
+        """Docstring."""
+        pass
+
+    @staticmethod
+    def read_message():
+        """Docstring."""
+        pass
 
 
 class EncryptedEmail(Email):
@@ -139,12 +154,12 @@ b'VGhpcyBpcyBhIHBsYWluIHRleHQgRW1haWwsIGZvbGxvd2VkIGJ5IEhUTUwu'
 
 '''
 
-email1 = EncryptedEmail('html', email_address, 'highslater@hotmail.com',
-                        content, alternative, 'html')
-email1.create_message()
-print((email1))
+# email1 = EncryptedEmail('html', email_address, 'highslater@hotmail.com',
+#                         content, alternative, 'html')
+# email1.create_message()
+# print((email1))
 
-email2 = Email('html', email_address, 'highslater@hotmail.com',
-               content, alternative, 'html')
-email2.create_message()
-print((email2))
+# email2 = Email('html', email_address, 'highslater@hotmail.com',
+#                content, alternative, 'html')
+# email2.create_message()
+# print((email2))
