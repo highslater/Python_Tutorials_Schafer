@@ -128,6 +128,16 @@ class EncryptedEmail(Email):
         """b64decode."""
         self.content = (base64.b64decode((self.content)))
 
+'''
+>>> content = "This is a plain text Email, followed by HTML."
+>>> e = base64.b64encode(bytes(content, 'utf-8'))
+>>> e
+b'VGhpcyBpcyBhIHBsYWluIHRleHQgRW1haWwsIGZvbGxvd2VkIGJ5IEhUTUwu'
+>>> d = (base64.b64decode((e))).decode()
+>>> d
+'This is a plain text Email, followed by HTML.'
+
+'''
 
 email1 = EncryptedEmail('html', email_address, 'highslater@hotmail.com',
                         content, alternative, 'html')
